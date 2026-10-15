@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painel de turismo inteligente de Brotas, SP.">
+  <title>Brotas SmartTour</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="logo" href="#">Brotas<span>SmartTour</span></a>
+    <nav>
+      <a href="#clima">Clima</a>
+      <a href="#atracoes">Atrações</a>
+      <a href="#ocupacao">Ocupação</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-conteudo">
+        <span class="etiqueta">TURISMO INTELIGENTE • BROTAS/SP</span>
+        <h1>Explore Brotas de forma mais inteligente.</h1>
+        <p>
+          Consulte o clima, conheça atrações e planeje seus passeios
+          com informações reunidas em um único lugar.
+        </p>
+        <a class="botao" href="#atracoes">Descobrir atrações ↓</a>
+      </div>
+    </section>
+
+    <section class="secao" id="clima">
+      <div class="cabecalho-secao">
+        <div>
+          <span class="subtitulo">PLANEJE SEU DIA</span>
+          <h2>Como está o tempo?</h2>
+          <p>Condições meteorológicas de Brotas, São Paulo.</p>
+        </div>
+        <button id="atualizarClima" class="botao-secundario">
+          ↻ Atualizar
+        </button>
+      </div>
+
+      <div class="clima-card">
+        <div>
+          <p id="condicao">Consultando o clima...</p>
+          <div class="temperatura">
+            <span id="temperatura">--</span><span>°C</span>
+          </div>
+          <p id="sensacao">Sensação térmica: --</p>
+        </div>
+        <div class="clima-detalhes">
+          <div>💧 Umidade <strong id="umidade">--%</strong></div>
+          <div>💨 Vento <strong id="vento">-- km/h</strong></div>
+          <div>🌧️ Chuva <strong id="chuva">--</strong></div>
+        </div>
+      </div>
+      <p class="nota" id="statusClima" role="status">
+        Carregando dados meteorológicos...
+      </p>
+    </section>
+
+    <section class="secao" id="atracoes">
+      <div class="cabecalho-secao">
+        <div>
+          <span class="subtitulo">DESCUBRA A REGIÃO</span>
+          <h2>Pontos de interesse</h2>
+          <p>Encontre opções para montar seu roteiro.</p>
+        </div>
+      </div>
+
+      <div class="filtros">
+        <input id="busca" type="search"
+          placeholder="Buscar uma atração..." aria-label="Buscar atração">
+        <select id="filtroCategoria" aria-label="Filtrar por categoria">
+          <option value="todos">Todas as categorias</option>
+          <option value="Natureza">Natureza</option>
+          <option value="Aventura">Aventura</option>
+          <option value="Cultura">Cultura</option>
+        </select>
+      </div>
+
+      <div class="grade-atracoes" id="listaAtracoes"></div>
+      <p class="nota">Confirme horários, preços e condições de visita
+        nos canais oficiais antes de sair.</p>
+    </section>
+
+    <section class="secao" id="ocupacao">
+      <div class="cabecalho-secao">
+        <div>
+          <span class="subtitulo">DISTRIBUIÇÃO DE VISITANTES</span>
+          <h2>Indicadores de ocupação</h2>
+          <p>Exemplo demonstrativo para comparar níveis de movimento.</p>
+        </div>
+        <span class="simulado">DADOS SIMULADOS</span>
+      </div>
+      <div class="grade-ocupacao" id="listaOcupacao"></div>
+      <p class="nota">
+        Estes valores são fictícios e não representam a lotação real
+        dos pontos turísticos.
+      </p>
+    </section>
+
+    <section class="chamada">
+      <h2>Mais informação, melhores passeios.</h2>
+      <p>Planeje com responsabilidade e valorize o turismo local.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Brotas SmartTour © 2026 — Projeto escolar de Turismo Inteligente</p>
+    <p>Clima: Open-Meteo API | Ocupação: dados demonstrativos</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
